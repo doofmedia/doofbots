@@ -1,0 +1,3 @@
+[submodule "doofbot"]
+	path = doofbot
+	url = https://github.com/ediebold/doofbot
