@@ -1,0 +1,36 @@
+{
+	"channel": "542550543663366144",
+	"devchannel": "569769541819826176",
+	"prefix": "$",
+	"matchSheets": {
+		"premiere": "2062104866",
+		"league1": "1360891325",
+		"league2": "1874924294"
+	},
+	"matchSheetStructures": {
+		"weekColumn": "A",
+		"startRow": "3",
+		"matches": [
+			{
+				"labelCell": "B1",
+				"usernameColumns": [ "B", "D" ],
+				"outcomeColumn": "F"
+			},
+			{
+				"labelCell": "G1",
+				"usernameColumns": [ "G", "I" ],
+				"outcomeColumn": "K"
+			},
+			{
+				"labelCell": "L1",
+				"usernameColumns": [ "L" ],
+				"outcomeColumn": ""
+			}
+		]
+	},
+	"standingsSheet": {
+		"sheetID": "1760112873",
+		"standingsRow": "B",
+		"usernamesRow": "C"
+	}
+}
