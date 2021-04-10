@@ -225,6 +225,11 @@ function getStandingsForLeague(sheet, startRow) {
 }
 
 function formatStandingsMessage(league, standings) {
+	let positions = [];
+	for (let position of Object.keys(standings)) {
+		let entry = position + " - " + standings[position];
+		positions.push(entry);
+	}
 	new_embed = {
 		"embed": {
 			"title": "Current " + capitalizeFirstLetter(league) + " Standings",
@@ -232,13 +237,8 @@ function formatStandingsMessage(league, standings) {
 			"timestamp": new Date(),
 			"fields": [
 				{
-					"name": "Rank",
-					"value": Object.keys(standings).join("\n"),
-					"inline": true
-				},
-				{
-					"name": "Player",
-					"value": Object.values(standings).join("\n"),
+					"name": "Ranks",
+					"value": "```" + positions.join("\n") + "```",
 					"inline": true
 				},
 			]

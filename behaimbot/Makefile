@@ -6,13 +6,17 @@ IMAGE_NAME=`echo behaimbot`
 build:
 	docker build -t $(DH_USERNAME)/$(IMAGE_NAME):version$(VERSION) .
 
+.PHONY: buildfresh
+buildfresh:
+	docker build --no-cache -t $(DH_USERNAME)/$(IMAGE_NAME):version$(VERSION) .
 .PHONY: push
+
 push:
 	docker push $(DH_USERNAME)/$(IMAGE_NAME):version$(VERSION)
 
 .PHONY: run
 run:
-	docker run --restart=always -e DBPASS=${DBPASS} -e BOTPASS=${BOTPASS} -t $(DH_USERNAME)/$(IMAGE_NAME):version$(VERSION)
+	docker run --restart=always -e BOTPASS=${BOTPASS} -t $(DH_USERNAME)/$(IMAGE_NAME):version$(VERSION)
 
 .PHONY: dev
 dev:
